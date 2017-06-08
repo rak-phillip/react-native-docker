@@ -10,5 +10,9 @@ RUN curl --silent --location https://rpm.nodesource.com/setup_8.x | bash -
 RUN yum -y install nodejs
 RUN yum -y install gcc-c++ make
 
+# Install yarn
+RUN curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo -o /etc/yum.repos.d/yarn.repo
+RUN yum -y install yarn
+
 # Install create-react-native-app
 RUN npm install -g create-react-native-app
